@@ -1,23 +1,6 @@
 <template>
-    <div class="conitaner">
-        <div class="row">
-            <div class="col-6"></div>
-            <div class="col-6">
-                <div class="row">
-                    <div class="col-12">
-                        
-                    </div>
-                    <div class="col-12">
+    <div>
                         <Modal :values = values></Modal>
-                    </div>
-                        
-                    </div> 
-            </div>
-        </div>
-        
-        
-        
-        
     </div>
 </template>
 
@@ -28,7 +11,6 @@ import Modal from '../components/Modal.vue'
 export default {
     name: 'Home',
     components: {
-        ButtonClick,
         SymbolList,
         Modal
     },

@@ -2,15 +2,14 @@
 <div class="container">
         <div class="col-12">
             <div class="row">
-                <div class="col-6">
-                </div>
+                <div class="col-6"></div>
                 <div class="col-6">
                     <div class="row">
                         <div class="col-6 text-end rounded">
                             <b-button variant="outline-dark p-3 px-5">Refresh</b-button>
                         </div>
                         <div class="col-6">
-                                <b-button class="outline-dark" @click="modalShow = !modalShow">Add Symbol</b-button>
+                                <b-button variant="outline-dark p-3 px-5" @click="modalShow = !modalShow">Add Symbol</b-button>
                                     <b-modal v-model="modalShow">
                                     <template v-for="(value, index) in values">
                                                     <SymbolList :value=value :key=index></SymbolList>
