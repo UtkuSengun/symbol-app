@@ -1,24 +1,36 @@
 <template>
-    <div>
-        <button-click></button-click>
-        <div class="col-12 border border-dark border border-5 rounded mt-5">
-        <template v-for="(value, index) in values">
-                    <symbol-list :value=value :key=index></symbol-list>
-                </template>
+    <div class="conitaner">
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        
+                    </div>
+                    <div class="col-12">
+                        <Modal :values = values></Modal>
+                    </div>
+                        
+                    </div> 
+            </div>
         </div>
+        
+        
+        
         
     </div>
 </template>
 
 <script>
-import ButtonClick from '../components/ButtonClick.vue'
 import SymbolList from '../components/SymbolList.vue';
+import Modal from '../components/Modal.vue'
 
 export default {
     name: 'Home',
     components: {
         ButtonClick,
-        SymbolList
+        SymbolList,
+        Modal
     },
     data() {
         return {
