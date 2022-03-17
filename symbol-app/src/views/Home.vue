@@ -23,7 +23,7 @@ export default {
     created() {
 
     this.$http.get("ticker/24hr").then(response => {
-        console.log(response)
+      
             this.values=response.data
         })
 
