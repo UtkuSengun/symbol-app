@@ -27,10 +27,7 @@ export default {
             this.values=response.data
         })
 
-        // axios.get('https://api2.binance.com/api/v3/ticker/24hr')
-        // .then(response => {
-        //     this.values=response.data
-        // })
+        
 }
 }
 </script>
