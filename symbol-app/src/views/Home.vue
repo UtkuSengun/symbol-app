@@ -21,17 +21,14 @@ export default {
         }
     },
     created() {
-        axios.get('https://api2.binance.com/api/v3/ticker/24hr')
-        .then(response => {
-            this.values=response.data
-        })
-    // const values = this.$http('ticker/24hr');
-    // this.values = values.data
-    // created() {
-    //     fetch('https://api2.binance.com/api/v3/ticker/24hr')
-    //     .then((res) => {return res.json () })
-    //     .then((values) => {this.values = values })
-    // }
+           
+           this.$http.get("ticker/24hr")
+
+
+        // axios.get('https://api2.binance.com/api/v3/ticker/24hr')
+        // .then(response => {
+        //     this.values=response.data
+        // })
 }
 }
 </script>
