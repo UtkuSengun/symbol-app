@@ -21,7 +21,6 @@
             </div>
             <div class="row mt-3">
                 <div class="col-12 border border-1 border border-dark">
-                    
                 </div>
             </div>
         </div>
