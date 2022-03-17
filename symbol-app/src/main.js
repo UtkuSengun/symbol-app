@@ -11,11 +11,10 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 const axiosIns = axios.create({
-    baseUrl:"https:api2.binance.com/api/v3" 
+    baseURL: 'https:api2.binance.com/api/v3/'
 });
 
-Vue.$http = Vue.prototype.$http = axiosIns
-
+Vue.prototype.$http = axiosIns;
 
 
 new Vue({

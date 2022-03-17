@@ -24,5 +24,7 @@ export default {
     props: {
         value: { type: Object }
     }
-}
+    
+    }
+
 </script>
