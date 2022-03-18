@@ -23,6 +23,9 @@
                 <div class="col-12 border border-1 border border-dark">
                 </div>
             </div>
+            
+            
+            
         </div>
         
     </div>
@@ -39,7 +42,8 @@ components: { SymbolList },
     
     data() {
     return {
-        modalShow: false
+        modalShow: false,
+        
     }
     }
 }

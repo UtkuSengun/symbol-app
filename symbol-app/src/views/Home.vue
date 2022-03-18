@@ -1,11 +1,11 @@
 <template>
     <div>
-            <Modal :values = values></Modal>
+            <modal :values = values></modal>
     </div>
+    
 </template>
 
 <script>
-import axios from 'axios';
 import SymbolList from '../components/SymbolList.vue';
 import Modal from '../components/Modal.vue'
 
@@ -17,17 +17,15 @@ export default {
     },
     data() {
         return {
-            values: []
+            values: [],           
         }
     },
     created() {
 
     this.$http.get("ticker/24hr").then(response => {
-      
             this.values=response.data
         })
 
-        
 }
 }
 </script>

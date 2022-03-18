@@ -1,6 +1,5 @@
 <template>
 <div class="container my-5">
-
     <div class="row">
         <div class="col-2"></div>
     <div class="col-8  border border-2 ">
@@ -9,7 +8,7 @@
                 {{value.symbol}} - {{value.lastPrice}}
             </div>
             <div class="col-2 p-2">
-                <button class="btn btn-success">Add</button>
+                <button @click="addSymbol(value.symbol)" class="btn btn-success">Add</button>
             </div>
         </div>
     </div>
@@ -23,6 +22,26 @@ export default {
     name: 'SymbolList',
     props: {
         value: { type: Object }
+    },
+    data() {
+        return {
+            addedSymbols: []
+        }
+    },
+    methods: {
+        addSymbol(symbolName) {
+            
+            if(!this.addedSymbols.includes(symbolName)) {
+                this.addedSymbols.push(symbolName)
+                //console.log("seçilen symbol" +  symbolName) //sembolun seçildiğini,birden fazla seçilemediğini anlıyoruz.
+            }
+
+            this.$emit('input', this.addedSymbols);
+            this.$emit('change', this.addedSymbols);
+            this.$emit('value', this.addedSymbols);
+            this.$emit('focus', this.addedSymbols);
+            this.$emit('clear', this.addedSymbols);
+        }
     }
     
     }
