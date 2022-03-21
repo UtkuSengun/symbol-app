@@ -12,7 +12,7 @@
                             <b-button variant="outline-dark p-3 px-5" @click="modalShow = !modalShow">Add Symbol</b-button>
                                 <b-modal v-model="modalShow">
                                     <template v-for="(value, index) in values">
-                                        <symbol-list :value=value :key=index></symbol-list>
+                                    <symbol-list :value="value" :key="index" @onAdd="handleAddSymbol"></symbol-list>
                                     </template>
                                 </b-modal>
                         </div>
@@ -20,8 +20,14 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-12 border border-1 border border-dark">
+                <div class="col-12 border border-1 border border-dark"></div>
             </div>
+            <div class="row mt-5 pt-5">
+                <div class="col-12 border border-4 border border-danger">
+                    
+
+
+                </div>
             </div>
         </div>
 </div>
@@ -37,10 +43,17 @@ components: { SymbolList },
     },
     
     data() {
-    return {
-        modalShow: false,
-        
-    }
-    }
+        return {
+            modalShow: false,
+            
+
+            
+        }
+    },
+    methods: {
+        handleAddSymbol(value){
+            this.$emit("onAddModal", value)
+        }
+    },
 }
 </script>

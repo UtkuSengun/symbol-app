@@ -1,6 +1,11 @@
 <template>
     <div>
-            <modal :values = values></modal> 
+        <modal :values="values" @onAddModal="handleAddModal"></modal> 
+        <ul>
+            <li v-for="item in selectedItems" :key="item">
+            {{item}}
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -16,7 +21,8 @@ export default {
     },
     data() {
         return {
-            values: [],           
+            values: [], 
+            selectedItems: []          
         }
     },
     created() {
@@ -24,6 +30,11 @@ export default {
     this.$http.get("ticker/24hr").then(response => {
             this.values=response.data
         })
+    },
+    methods: {
+        handleAddModal(value) {
+            this.selectedItems.push(value)
+        }
     }
     }
 </script>

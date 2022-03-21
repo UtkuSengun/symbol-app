@@ -34,7 +34,7 @@ export default {
                 this.addedSymbols.push(symbolName)
                // console.log("seçilen symbol" +  symbolName) //sembolun seçildiğini,birden fazla seçilemediğini anlıyoruz.
             }
-            this.$emit('input', this.addedSymbols )
+            this.$emit('onAdd', symbolName)
         }
     }
     
