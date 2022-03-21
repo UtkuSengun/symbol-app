@@ -1,11 +1,7 @@
 <template>
     <div>
-            <modal :values = values  v-model="childData"></modal>
-
-            <p @input="childData=$event">{{childData}}</p>
-                        
+            <modal :values = values></modal> 
     </div>
-    
 </template>
 
 <script>
@@ -20,8 +16,7 @@ export default {
     },
     data() {
         return {
-            values: [],       
-            childData: []    
+            values: [],           
         }
     },
     created() {
@@ -29,7 +24,6 @@ export default {
     this.$http.get("ticker/24hr").then(response => {
             this.values=response.data
         })
-
-}
-}
+    }
+    }
 </script>
