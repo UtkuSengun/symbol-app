@@ -9,10 +9,10 @@
                             <b-button variant="outline-dark p-3 px-5">Refresh</b-button>
                         </div>
                         <div class="col-6">
-                                <b-button variant="outline-dark p-3 px-5" @click="modalShow = !modalShow">Add Symbol</b-button>
-                                    <b-modal v-model="modalShow">
+                            <b-button variant="outline-dark p-3 px-5" @click="modalShow = !modalShow">Add Symbol</b-button>
+                                <b-modal v-model="modalShow">
                                     <template v-for="(value, index) in values">
-                                                    <symbol-list :value=value :key=index></symbol-list>
+                                        <symbol-list :value=value :key=index></symbol-list>
                                     </template>
                                 </b-modal>
                         </div>
@@ -21,15 +21,10 @@
             </div>
             <div class="row mt-3">
                 <div class="col-12 border border-1 border border-dark">
-                </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    
-                </div>
             </div>
         </div>
-    </div>
+</div>
 </template>
 
 <script>
