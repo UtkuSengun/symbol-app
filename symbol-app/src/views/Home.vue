@@ -1,6 +1,9 @@
 <template>
     <div>
-            <modal :values = values></modal>
+            <modal :values = values  v-model="childData"></modal>
+
+            <p @input="childData=$event">{{childData}}</p>
+                        
     </div>
     
 </template>
@@ -17,7 +20,8 @@ export default {
     },
     data() {
         return {
-            values: [],           
+            values: [],       
+            childData: []    
         }
     },
     created() {

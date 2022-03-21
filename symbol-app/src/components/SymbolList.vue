@@ -13,7 +13,6 @@
         </div>
     </div>
     </div>
-
 </div>
 </template>
 
@@ -21,7 +20,7 @@
 export default {
     name: 'SymbolList',
     props: {
-        value: { type: Object }
+        value: { type: Object },
     },
     data() {
         return {
@@ -33,14 +32,9 @@ export default {
             
             if(!this.addedSymbols.includes(symbolName)) {
                 this.addedSymbols.push(symbolName)
-                //console.log("seçilen symbol" +  symbolName) //sembolun seçildiğini,birden fazla seçilemediğini anlıyoruz.
+               // console.log("seçilen symbol" +  symbolName) //sembolun seçildiğini,birden fazla seçilemediğini anlıyoruz.
             }
-
-            this.$emit('input', this.addedSymbols);
-            this.$emit('change', this.addedSymbols);
-            this.$emit('value', this.addedSymbols);
-            this.$emit('focus', this.addedSymbols);
-            this.$emit('clear', this.addedSymbols);
+            this.$emit('input', this.addedSymbols )
         }
     }
     

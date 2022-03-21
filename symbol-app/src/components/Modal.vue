@@ -12,7 +12,7 @@
                                 <b-button variant="outline-dark p-3 px-5" @click="modalShow = !modalShow">Add Symbol</b-button>
                                     <b-modal v-model="modalShow">
                                     <template v-for="(value, index) in values">
-                                                    <SymbolList :value=value :key=index></SymbolList>
+                                                    <symbol-list :value=value :key=index></symbol-list>
                                     </template>
                                 </b-modal>
                         </div>
@@ -23,11 +23,12 @@
                 <div class="col-12 border border-1 border border-dark">
                 </div>
             </div>
-            
-            
-            
+            <div class="row">
+                <div class="col-12">
+                    
+                </div>
+            </div>
         </div>
-        
     </div>
 </template>
 
