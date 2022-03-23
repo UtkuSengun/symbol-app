@@ -4,9 +4,16 @@
 
         <div class="row mt-5 rounded">
 
-            <div class="col-8 ml-5" v-for="(item , i ) in selectedItems" :key="i">
-                <div class="row">
-                            <p class="my-3 border border-2 border border-danger rounded" >{{item.name +      item.price}}</p>
+            <div class="col-12 ml-5" v-for="(item , i ) in selectedItems" :key="i">
+                <div class="row border border-2 border border-dark rounded">
+                    <div class="col-2"></div>
+
+                    <div class="col-8 my-3 mx-3 p-3 border border-2 rounded">
+                        {{item.name + item.price}}
+                        <button class="btn btn-success">Add</button>
+                    </div>
+
+                    <div class="col-2"></div>
                 </div>
             </div>
 
