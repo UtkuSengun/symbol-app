@@ -22,11 +22,10 @@
             <div class="row mt-3">
                 <div class="col-12 border border-1 border border-dark"></div>
             </div>
-            <div class="row mt-5 pt-5">
-                <div class="col-12 border border-4 border border-danger">
+
+            <div class="row">
+                <div class="col-12">
                     
-
-
                 </div>
             </div>
         </div>
@@ -45,9 +44,6 @@ components: { SymbolList },
     data() {
         return {
             modalShow: false,
-            
-
-            
         }
     },
     methods: {
