@@ -2,18 +2,24 @@
     <div>
         <modal :values="values" @onAddModal="handleAddModal"></modal> 
 
-        <div class="row mt-5 rounded">
+        <div class="row mt-5 rounded border border-2 border border-dark">
 
-            <div class="col-12 ml-5" v-for="(item , i ) in selectedItems" :key="i">
-                <div class="row border border-2 border border-dark rounded">
-                    <div class="col-2"></div>
-
-                    <div class="col-8 my-3 mx-3 p-3 border border-2 rounded">
-                        {{item.name + item.price}}
-                        <button class="btn btn-success">Add</button>
+            <div class="row my-3">
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                        <input class="form-control" placeholder="Search Symbols">
                     </div>
-
-                    <div class="col-2"></div>
+                    <div class="col-8"></div>
+            </div>
+            
+            <div class="col-12" v-for="(item , i ) in selectedItems" :key="i">
+                <div class="row p-2 m-2 border border-2 rounded">
+                    <div class="col-10 text-start">
+                        {{item.name +" --- "+ item.price}}
+                    </div>
+                    <div class="col-2 text-end">
+                        <button class="btn btn-danger text-center">Remove</button>
+                    </div>
                 </div>
             </div>
 
@@ -40,7 +46,8 @@ export default {
     data() {
         return {
             values: [], 
-            selectedItems: []          
+            selectedItems: [],
+                
         }
     },
     created() {
@@ -53,6 +60,6 @@ export default {
         handleAddModal(value) {
             this.selectedItems.push(value)
         }
-    }
+        }
     }
 </script>
